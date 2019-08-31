@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">FirebaseLogin</string>
+    <string name="auth_message">We need to text you the OTP to \n  \t authenticate your accounts </string>
+</resources>

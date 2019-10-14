@@ -8,22 +8,38 @@
     tools:context=".OtpVerificationActivity">
 
 
-    <EditText
-        android:id="@+id/edt_otp"
-        android:layout_width="200dp"
-        android:layout_height="40dp"
-        android:layout_marginTop="80dp"
-        android:background="@drawable/edittext_layout"
-        android:ems="10"
-        android:hint="Enter OTP"
-        android:inputType="number"
-        android:paddingLeft="15dp"
-        android:paddingRight="15dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tv_otp_sent_phone_number" />
+    <!-- <EditText
+         android:id="@+id/edt_otp"
+         android:layout_width="200dp"
+         android:layout_height="40dp"
+         android:layout_marginTop="80dp"
+         android:background="@drawable/edittext_layout"
+         android:ems="10"
+         android:hint="Enter OTP"
+         android:inputType="number"
+         android:paddingLeft="15dp"
+         android:paddingRight="15dp"
+         app:layout_constraintEnd_toEndOf="parent"
+         app:layout_constraintHorizontal_bias="0.497"
+         app:layout_constraintStart_toStartOf="parent"
+         app:layout_constraintTop_toBottomOf="@+id/tv_otp_sent_phone_number" />  -->
 
+
+    <com.goodiebag.pinview.Pinview
+        android:id="@+id/edt_otp"
+        android:layout_width="373dp"
+        android:layout_height="58dp"
+        android:layout_marginTop="116dp"
+        app:cursorVisible="true"
+        app:forceKeyboard="true"
+        app:inputType="number"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_otp_sent_phone_number"
+        app:password="false"
+        app:pinHeight="30dp"
+        app:pinLength="6"
+        app:pinWidth="30dp" />
 
     <Button
         android:id="@+id/btn_verify"
@@ -31,7 +47,7 @@
         android:layout_height="45dp"
         android:background="@drawable/button_round"
         android:text="VERIFY OTP"
-        android:textColor="@color/white"
+        android:textColor="@color/black"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.496"
@@ -43,13 +59,14 @@
         android:id="@+id/tv_resend_otp"
         android:layout_width="159dp"
         android:layout_height="22dp"
+        android:layout_marginTop="32dp"
         android:text="Wait 30 sec to resend"
         app:layout_constraintBottom_toTopOf="@+id/btn_verify"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.265"
+        app:layout_constraintHorizontal_bias="0.253"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/edt_otp"
-        app:layout_constraintVertical_bias="0.093" />
+        app:layout_constraintVertical_bias="0.0" />
 
     <ImageView
         android:id="@+id/imageView3"

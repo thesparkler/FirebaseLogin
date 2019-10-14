@@ -39,7 +39,7 @@ public class MainActivity extends AppCompatActivity {
 
     private void checkUserLoggedIn() {
         if (mFireBaseUser != null) {
-            startActivity(new Intent(this, UserDetailActivity.class));
+            startActivity(new Intent(this, HomeScreen.class));
             finish();
         }
     }

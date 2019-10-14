@@ -18,41 +18,41 @@ public class UserDetailActivity extends AppCompatActivity {
 
     FirebaseAuth mAuth = FirebaseAuth.getInstance();
     DatabaseReference mDatabaseRef = FirebaseDatabase.getInstance().getReference();
-    TextView name;
+  //  TextView name;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_user_detail);
 
-        init();
-        setUserData();
+    //    init();
+     //   setUserData();
     }
 
-    private void init() {
-        name = findViewById(R.id.tv_text);
-    }
+//    private void init() {
+//        name = findViewById(R.id.tv_text);
+//    }
 
-    private void setUserData() {
-        final String currentUniqueId = mAuth.getCurrentUser().getUid();
-        mDatabaseRef.child("Users").addListenerForSingleValueEvent(new ValueEventListener() {
-            @Override
-            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                if(dataSnapshot.child(currentUniqueId).exists()) {
-                    String firstName = dataSnapshot.child(currentUniqueId).child("FirstName").getValue().toString();
-                    name.setText("Welcome " + firstName);
-                }
-                else
-                {
-                    startActivity(new Intent(UserDetailActivity.this, SubmitUserDetailActivity.class));
-                    finish();
-                }
-            }
-
-            @Override
-            public void onCancelled(@NonNull DatabaseError databaseError) {
-
-            }
-        });
-    }
+//    private void setUserData() {
+//        final String currentUniqueId = mAuth.getCurrentUser().getUid();
+//        mDatabaseRef.child("Users").addListenerForSingleValueEvent(new ValueEventListener() {
+//            @Override
+//            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+//                if(dataSnapshot.child(currentUniqueId).exists()) {
+//                    String firstName = dataSnapshot.child(currentUniqueId).child("FirstName").getValue().toString();
+//                    name.setText("Welcome " + firstName);
+//                }
+//                else
+//                {
+//                    startActivity(new Intent(UserDetailActivity.this, SubmitUserDetailActivity.class));
+//                    finish();
+//                }
+//            }
+//
+//            @Override
+//            public void onCancelled(@NonNull DatabaseError databaseError) {
+//
+//            }
+//        });
+//    }
 }

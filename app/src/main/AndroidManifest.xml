@@ -2,7 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.firebaselogin">
 
-    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.INTERNET" />
 
     <application
         android:allowBackup="true"
@@ -11,11 +11,26 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".SubmitUserDetailActivity" android:screenOrientation="portrait"></activity>
-        <activity android:name=".UserDetailActivity" android:screenOrientation="portrait" />
-        <activity android:name=".OtpVerificationActivity" android:screenOrientation="portrait" />
-        <activity android:name=".PhoneLoginActivity" android:screenOrientation="portrait" />
-        <activity android:name=".MainActivity" android:screenOrientation="portrait">
+        <activity
+            android:name=".HomeScreen"
+            android:label="@string/title_activity_home_screen"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:screenOrientation="portrait"></activity>
+        <activity
+            android:name=".SubmitUserDetailActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".UserDetailActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".OtpVerificationActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".PhoneLoginActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".MainActivity"
+            android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

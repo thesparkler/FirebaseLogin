@@ -14,6 +14,7 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.goodiebag.pinview.Pinview;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.FirebaseException;
@@ -35,7 +36,7 @@ public class OtpVerificationActivity extends AppCompatActivity {
     DatabaseReference mDataBaseRef = FirebaseDatabase.getInstance().getReference();
     PhoneAuthProvider.OnVerificationStateChangedCallbacks mPhoneCallBack;
 
-    EditText edtOTP;
+    Pinview edtOTP;
     Button btnVerify;
     TextView tvOtpSentPhoneNumberText, resendOtpText;
     String verificationId, resendToken, phoneNumber;
@@ -112,7 +113,7 @@ public class OtpVerificationActivity extends AppCompatActivity {
     }
 
     private boolean isOtpEntered() {
-        return edtOTP.getText().toString().length() == 6;
+        return edtOTP.getValue().length() == 6;
     }
 
     private void resendOtpToNumber(String phoneNumber)
@@ -127,7 +128,7 @@ public class OtpVerificationActivity extends AppCompatActivity {
     }
 
     private void verifyOtp() {
-        String enteredOtp = edtOTP.getText().toString();
+        String enteredOtp = edtOTP.getValue();
         PhoneAuthCredential phoneAuthCredential = PhoneAuthProvider.getCredential(verificationId, enteredOtp);
         loginWithGivenCredential(phoneAuthCredential);
     }

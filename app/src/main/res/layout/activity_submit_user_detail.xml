@@ -47,7 +47,7 @@
         android:layout_marginBottom="100dp"
         android:background="@drawable/button_round"
         android:text="REGISTER"
-        android:textColor="@color/white"
+        android:textColor="@color/black"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.492"

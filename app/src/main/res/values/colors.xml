@@ -1,10 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <color name="colorPrimary">#3F51B5</color>
-    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorPrimaryDark">#C0A001</color>
     <color name="colorAccent">#FF4081</color>
     <color name="grey">#504E4E</color>
     <color name="blue">#1E29AC</color>
     <color name="white">#fff</color>
     <color name="black">#000</color>
+    <color name="yellow">#D3A30F</color>
+    <color name="dark_yellow">#C0A001</color>
 </resources>
+
+
+<!-- colorPrimary - #3F51B5  colorPrimaryDark - #303F9F -->
